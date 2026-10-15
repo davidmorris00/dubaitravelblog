@@ -1,308 +1,190 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact Us | Dubai Explorer Hub</title>
+    <title>Contact Us | Dubai Explorer Hub</title>
+    <meta name="description" content="Contact Dubai Explorer Hub for Dubai travel information, travel tips, tours, and travel-related enquiries.">
 
-  <meta name="description" content="Contact Dubai Explorer Hub with travel guide suggestions, questions, feedback or corrections about our Dubai travel information.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#123044">
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+        header {
+            background-color: #0b2545;
+            color: white;
+            padding: 20px 8%;
+        }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #263746;
-      line-height: 1.8;
-    }
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-    a {
-      color: #087e8b;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 15px;
+        }
 
-    header {
-      padding: 20px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      background: #fff;
-      border-bottom: 1px solid #e5eaed;
-    }
+        nav a:hover {
+            color: #f4b942;
+        }
 
-    .brand {
-      color: #087e8b;
-      font-size: 23px;
-      font-weight: 700;
-      text-decoration: none;
-    }
+        .contact-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-    nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+        .contact-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
 
-    nav a {
-      color: #263746;
-      text-decoration: none;
-      font-weight: 600;
-    }
+        .contact-content h2 {
+            color: #0b2545;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
 
-    .hero {
-      background: #123044;
-      color: white;
-      padding: 65px 8%;
-    }
+        .contact-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
 
-    .hero-inner {
-      max-width: 850px;
-      margin: auto;
-    }
+        .contact-detail {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f1f5f9;
+            border-left: 4px solid #f4b942;
+            border-radius: 5px;
+        }
 
-    .eyebrow {
-      color: #e9bb59;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: bold;
-      font-size: 13px;
-    }
+        .contact-detail h3 {
+            color: #0b2545;
+            margin-bottom: 8px;
+        }
 
-    h1, h2, h3 {
-      line-height: 1.3;
-    }
+        .contact-detail a {
+            color: #087e8b;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
 
-    h1 {
-      font-size: clamp(36px, 5vw, 50px);
-      margin-bottom: 15px;
-    }
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
 
-    .hero p {
-      font-size: 18px;
-      color: #e4edf2;
-      max-width: 720px;
-    }
+        footer {
+            background-color: #0b2545;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 50px;
+        }
 
-    main {
-      max-width: 1050px;
-      margin: auto;
-      padding: 45px 24px 75px;
-    }
+        footer p {
+            margin: 5px 0;
+        }
 
-    .intro {
-      max-width: 780px;
-      margin-bottom: 35px;
-    }
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
+            nav a {
+                display: inline-block;
+                margin: 5px 12px 5px 0;
+            }
 
-    .contact-card {
-      padding: 25px;
-      border: 1px solid #e1e7eb;
-      border-radius: 10px;
-      background: #fff;
-    }
+            .contact-section {
+                margin: 35px auto;
+            }
 
-    .contact-card h2 {
-      font-size: 22px;
-      margin-top: 0;
-    }
+            .contact-content {
+                padding: 25px 20px;
+            }
 
-    .contact-card p {
-      color: #5e6c78;
-    }
-
-    .note {
-      margin-top: 28px;
-      padding: 22px;
-      border-left: 4px solid #087e8b;
-      background: #f3f7f6;
-      border-radius: 5px;
-    }
-
-    .links {
-      margin-top: 35px;
-    }
-
-    footer {
-      padding: 28px 7%;
-      text-align: center;
-      background: #122637;
-      color: #e0e8ed;
-    }
-
-    footer a {
-      color: white;
-      margin: 0 8px;
-    }
-
-    footer p {
-      margin: 8px 0;
-    }
-
-    @media (max-width: 650px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        gap: 13px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      main {
-        padding: 35px 20px 55px;
-      }
-    }
-  </style>
+            .contact-content h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <a class="brand" href="index.html">Dubai Explorer Hub</a>
+    <header>
+        <h1>Dubai Explorer Hub</h1>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Travel Guides</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-    </nav>
-  </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">Get in Touch</p>
+    <main>
+        <section class="contact-section">
+            <div class="contact-content">
 
-      <h1>Contact Dubai Explorer Hub</h1>
+                <h2>Contact Us</h2>
 
-      <p>
-        Have a question about our travel guides, a suggestion for a
-        future article, or information that needs correcting?
-        We welcome relevant feedback from our readers.
-      </p>
-    </div>
-  </section>
+                <p>
+                    Welcome to Dubai Explorer Hub! If you have questions,
+                    suggestions, or travel-related enquiries about Dubai,
+                    feel free to contact us using the details below.
+                </p>
 
-  <main>
-    <section class="intro">
-      <h2>How Can We Help?</h2>
+                <div class="contact-detail">
+                    <h3>Email Address</h3>
+                    <p>
+                        <a href="mailto:dubaicitysightseeingtours@gmail.com">
+                            dubaicitysightseeingtours@gmail.com
+                        </a>
+                    </p>
+                </div>
 
-      <p>
-        Dubai Explorer Hub shares travel information, destination
-        guides and practical tips for visitors planning a trip to Dubai.
-        Your feedback can help us keep our content useful and clear.
-      </p>
+                <div class="contact-detail">
+                    <h3>Phone Number</h3>
+                    <p>
+                        <a href="tel:+971503399740">
+                            +971 503399740
+                        </a>
+                    </p>
+                </div>
 
-      <p>
-        You can contact us about article suggestions, corrections,
-        website feedback and general questions related to our published
-        content.
-      </p>
-    </section>
+                <p style="margin-top: 25px;">
+                    We appreciate your interest in Dubai Explorer Hub
+                    and look forward to hearing from you.
+                </p>
 
-    <section class="contact-grid" aria-label="Contact information">
+            </div>
+        </section>
+    </main>
 
-      <article class="contact-card">
-        <h2>Travel Guide Questions</h2>
-        <p>
-          Have a question or suggestion about a Dubai attraction,
-          itinerary, transport guide or travel article? Please identify
-          the relevant page and explain what information you need.
-        </p>
-      </article>
-
-      <article class="contact-card">
-        <h2>Content Corrections</h2>
-        <p>
-          Travel details can change. If you notice outdated information
-          or a factual error in one of our articles, tell us which page
-          needs attention and include a reliable reference if available.
-        </p>
-      </article>
-
-      <article class="contact-card">
-        <h2>Feedback and Suggestions</h2>
-        <p>
-          We welcome ideas for future Dubai travel guides, suggestions
-          to improve website usability and constructive reader feedback.
-        </p>
-      </article>
-
-      <article class="contact-card">
-        <h2>Business Enquiries</h2>
-        <p>
-          For relevant editorial or business enquiries, please provide
-          your organisation details, the reason for contacting us and
-          the best way to respond.
-        </p>
-      </article>
-
-    </section>
-
-    <section class="note">
-      <h2>Before You Contact Us</h2>
-
-      <p>
-        Dubai Explorer Hub is a travel information website. For
-        real-time ticket availability, booking changes, refunds,
-        attraction opening hours, visa decisions or official travel
-        requirements, please contact the relevant attraction,
-        booking provider or government authority directly.
-      </p>
-
-      <p>
-        Please avoid sending passwords, payment card details or other
-        sensitive personal information through general enquiries.
-      </p>
-    </section>
-
-    <section class="links">
-      <h2>Explore More</h2>
-
-      <p>
-        Visit our <a href="about.html">About page</a> to learn about
-        this website, or browse our
-        <a href="blog.html">Dubai travel guides</a> for destination
-        information and planning tips.
-      </p>
-
-      <p>
-        Return to the <a href="index.html">Dubai Explorer Hub homepage</a>.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p><strong>Dubai Explorer Hub</strong></p>
-    <p>Practical travel information for exploring Dubai.</p>
-
-    <p>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Travel Guides</a>
-      <a href="contact.html">Contact</a>
-    </p>
-
-    <p>© 2026 Dubai Explorer Hub. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2026 Dubai Explorer Hub. All rights reserved.</p>
+        <p>Explore Dubai with confidence.</p>
+    </footer>
 
 </body>
 </html>
+```
